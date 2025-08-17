@@ -540,7 +540,7 @@ endif()
 if(WEBP_BUILD_CWEBP)
   # cwebp
   parse_makefile_am(${CMAKE_CURRENT_SOURCE_DIR}/examples "CWEBP_SRCS" "cwebp")
-  add_library(cwebp ${CWEBP_SRCS})
+  add_library(cwebp SHARED ${CWEBP_SRCS})
   # add_executable(cwebp ${CWEBP_SRCS})
   target_link_libraries(cwebp exampleutil imagedec webp)
   target_include_directories(cwebp PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/src
