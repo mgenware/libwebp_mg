@@ -1,5 +1,5 @@
-#ifndef TOOLS_CJXLX_H
-#define TOOLS_CJXLX_H
+#ifndef WEBP_EXAMPLES_CWEBP_H_
+#define WEBP_EXAMPLES_CWEBP_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,4 +13,4 @@ int cwebp_main(int argc, const char* argv[]);
 }
 #endif
 
-#endif  // TOOLS_CJXLX_H
+#endif  // WEBP_EXAMPLES_CWEBP_H_
