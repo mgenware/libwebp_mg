@@ -535,11 +535,16 @@ endif()
 if(WEBP_BUILD_CWEBP)
   # cwebp
   parse_makefile_am(${CMAKE_CURRENT_SOURCE_DIR}/examples "CWEBP_SRCS" "cwebp")
-  add_executable(cwebp ${CWEBP_SRCS})
+  add_library(cwebp ${CWEBP_SRCS})
+  # add_executable(cwebp ${CWEBP_SRCS})
   target_link_libraries(cwebp exampleutil imagedec webp)
   target_include_directories(cwebp PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/src
                                            ${CMAKE_CURRENT_SOURCE_DIR})
-  install(TARGETS cwebp RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+  # install(TARGETS cwebp RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+  install(TARGETS cwebp
+    RUNTIME DESTINATION $ENV{KU_DIST_DIR}/bin
+    LIBRARY DESTINATION $ENV{KU_DIST_LIB_DIR}
+    ARCHIVE DESTINATION $ENV{KU_DIST_LIB_DIR})
 endif()
 
 if(WEBP_BUILD_LIBWEBPMUX)
