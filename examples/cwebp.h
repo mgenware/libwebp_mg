@@ -7,7 +7,7 @@ extern "C" {
 
 #include <stdio.h>
 
-int cwebp_main(int argc, const char* argv[]);
+int cwebp_main(int argc, char* argv[]);
 
 #ifdef __cplusplus
 }

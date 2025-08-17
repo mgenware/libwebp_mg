@@ -695,7 +695,7 @@ static const char* const kErrorMessages[VP8_ENC_ERROR_LAST] = {
 //------------------------------------------------------------------------------
 
 // Returns EXIT_SUCCESS on success, EXIT_FAILURE on failure.
-int cwebp_main(int argc, const char* argv[]) {
+int cwebp_main(int argc, char* argv[]) {
   int return_value = EXIT_FAILURE;
   const char* in_file = NULL, *out_file = NULL, *dump_file = NULL;
   FILE* out = NULL;
